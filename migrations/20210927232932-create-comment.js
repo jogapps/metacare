@@ -15,6 +15,9 @@ module.exports = {
       comment: {
         type: Sequelize.TEXT
       },
+      ip_address: {
+        type: Sequelize.STRING
+      },
        createdAt: {
         allowNull: false,
         type: Sequelize.DATE

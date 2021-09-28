@@ -14,10 +14,32 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Comment.init({
-    name: DataTypes.STRING
+    id: {
+      allowNull: false,
+      primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV1,
+    },
+    movie_id: {
+      allowNull: false,
+      type: DataTypes.STRING
+    },
+    comment: {
+      type: DataTypes.TEXT
+    },
+    ip_address: {
+      type: DataTypes.STRING
+    },
+     createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE
+    }
   }, {
     sequelize,
     modelName: 'Comment',
+    timestamps: true,
+    paranoid: true,
+    tableName: 'comments',
   });
   return Comment;
 };
