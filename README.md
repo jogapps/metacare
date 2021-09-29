@@ -5,6 +5,10 @@
  - Add Comments
  - View Comments
  
+## Base Url
+https://metacare-backend.herokuapp.com/api/v1
+
+
 ## Routes
 
  - MOVIE LISTINGS WITH COMMENTS
